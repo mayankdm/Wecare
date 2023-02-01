@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
+import userImg from '../images/user.png';
 
 export default function UserReg() {
     const [validated, setValidated] = useState(false);
@@ -17,7 +18,7 @@ export default function UserReg() {
         <Card className='coach-reg-card'>
             <Card.Body>
                 <div className='coach-reg-header'>
-                    <i className='fa fa-user reg-user-md'></i>
+                <img src={userImg} className="reg-user-md" alt="..." />
                     <Card.Title>User Profile</Card.Title>
                 </div>
                 <Card.Text>

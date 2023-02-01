@@ -12,7 +12,7 @@ export default function AppointmentSuccess() {
                 <br></br>
                 <br></br>
                 <Button variant="primary" type="submit">
-                    <i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back
+                    <i className="fa fa-arrow-left" aria-hidden="true"></i> Go Back
                 </Button>
             </Card.Body>
         </Card>

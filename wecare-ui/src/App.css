@@ -63,7 +63,7 @@
 }
 
 .home-card {
-  width: 15rem;
+  width: 20rem;
   color: white;
   background-color: black !important;
   margin: 1rem;
@@ -124,7 +124,7 @@
 }
 
 .reg-user-md {
-  font-size: 2.5rem;
+  width: 1.25rem;
 }
 
 .reg-form-group {
@@ -149,7 +149,8 @@
 .gender-container {
   display: inline-flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 1rem;
 }
 
 .coach-reg-container {

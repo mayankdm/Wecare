@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
+import coachImg from '../images/coach.png';
 
 export default function CoachLogin() {
     const [validated, setValidated] = useState(false);
@@ -17,7 +18,7 @@ export default function CoachLogin() {
         <Card className='coach-login-card'>
             <Card.Body>
                 <div className='coach-reg-header'>
-                    <i className='fa fa-user-md reg-user-md'></i>
+                <img src={coachImg} className="reg-user-md" alt="..." />
                     <Card.Title>Login As Life Coach</Card.Title>
                 </div>
                 <Card.Text>

@@ -16,7 +16,7 @@ export default function UserProfile() {
                     </div>
                 </div>
                 <Button className='usercard-profile-button' variant="primary" type="submit">
-                    <i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back
+                    <i className="fa fa-arrow-left" aria-hidden="true"></i> Go Back
                 </Button>
             </Card.Body>
         </Card>

@@ -8,7 +8,9 @@ function App() {
   return (
     <>
       <WecareNavbar></WecareNavbar>
+      <br/><br/>
       <Body></Body>
+      <br/><br/>
       <WecareFooter></WecareFooter>
     </>
   );

@@ -6,7 +6,7 @@ export default function WecareNavbar() {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">WeCare</Navbar.Brand>
+                <Navbar.Brand href="/">WeCare</Navbar.Brand>
                 <Nav>
                     <div className='right-menu'>
                         <i className="fa fa-phone" aria-hidden="true"></i>

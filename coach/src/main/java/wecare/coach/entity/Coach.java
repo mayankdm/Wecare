@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import wecare.coach.dto.CoachDTO;
 
 @Entity
-@Table(name = "address")
+@Table(name = "Coach")
 public class Coach {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,14 +23,18 @@ public class Coach {
 	private String mobile;
 	private String speciality;
 
-	public Coach(CoachDTO coachDto) {
-		id = coachDto.getId();
-		name = coachDto.getName();
-		dob = coachDto.getDob();
-		gender = coachDto.getGender();
-		mobile = coachDto.getMobile();
-		speciality = coachDto.getSpeciality();
-		password = coachDto.getPassword();
+	public Coach(CoachDTO dto) {
+		id = dto.getId();
+		name = dto.getName();
+		dob = dto.getDob();
+		gender = dto.getGender();
+		mobile = dto.getMobile();
+		speciality = dto.getSpeciality();
+		password = dto.getPassword();
+	}
+
+	public Coach() {
+		super();
 	}
 
 	public Long getId() {

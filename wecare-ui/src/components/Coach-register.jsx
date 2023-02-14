@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-import { registerCoach } from '../action';
+// import { registerCoach } from '../action';
 import coachImg from '../images/coach.png';
 
 export default connect()(function CoachReg(props) {
@@ -17,6 +17,12 @@ export default connect()(function CoachReg(props) {
     const [speciality, setSpeciality] = useState("Speciality1");
     const [post, setPost] = useState({});
     const [register, setRegister] = useState(true);
+    useEffect(() => {
+        axios.get(`http://localhost:8081/coach-api/coaches`)
+            .then((response) => {
+                console.log(response)
+            })
+    }, [])
     const handleSubmit = async (event) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
@@ -25,17 +31,17 @@ export default connect()(function CoachReg(props) {
         }
         setValidated(true);
         const coach = { name: name, password: password, dob: dob, gender: gender, mobile: mobile, speciality: speciality }
-        console.log(coach);
-        await axios.post("http://localhost:8081/coach-api/coaches", coach).then((response) => {
-            if (response) {
-                setPost(response.data)
-                setRegister(false)
-            }
-        }).catch((error) => {
-            console.log(error.message);
+        axios({
+            method: 'post',
+            url: `http://localhost:8081/coach-api/coaches`,
+            withCredentials: false,
+            data: coach
+        }).then(response => {
+            console.log(response);
+            setPost(response);
+        }).catch(err => {
+            console.log(err)
         });
-        props.dispatch(registerCoach(coach));
-
     };
     return (
         <>

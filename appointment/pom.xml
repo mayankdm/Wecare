@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wecare</groupId>
-	<artifactId>user</artifactId>
+	<artifactId>appointment</artifactId>
 	<version>0.0.1</version>
-	<name>user</name>
+	<name>appointment</name>
 	<description>WeCare Online Life Coach</description>
 	<properties>
 		<java.version>1.8</java.version>

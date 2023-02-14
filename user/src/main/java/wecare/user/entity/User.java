@@ -26,6 +26,10 @@ public class User {
 	private Boolean gender;
 	private Long pinCode;
 	
+	public User() {
+		super();
+	}
+
 	public User(UserDTO dto) {
 		id = dto.getId();
 		name = dto.getName();

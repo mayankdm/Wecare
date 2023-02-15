@@ -18,7 +18,7 @@ import wecare.coach.service.CoachService;
 
 @RestController
 @RequestMapping("/coaches")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000")
 public class CoachController {
 
 	@Autowired
